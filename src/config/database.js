@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 module.exports = {
-  dialect: process.env.DB_CONNECTION, // or 'postgres' and yarn add pg-hstore or https://sequelize.org/master/manual/dialects.html
+  dialect: process.env.DB_DRIVE,
   host: process.env.DB_HOST,
   username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
   define: {
     timestamps: true,
     underscored: true,
