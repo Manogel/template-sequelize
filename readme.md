@@ -26,3 +26,9 @@ _Desfaz a ultima modificação do db:migrate_
 
 yarn sequelize db:migrate:undo:all
 _Desfaz todas as modificação do db:migrate_
+
+## Contact
+
+Manoel Gomes - [Github](https://github.com/Manogel) - **manoelgomes53@gmail.com**
+
+Repo: [Manogel/api-sequelize](https://github.com/Manogel/api-sequelize)
