@@ -1,3 +1,8 @@
-/node_modules/
-/temp/uploads/*
+node_modules
 .env
+
+tmp/*
+!tmp/.gitkeep
+
+dist
+__tests__/coverage/*

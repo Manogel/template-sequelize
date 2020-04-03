@@ -17,11 +17,11 @@ class Database {
 
     models
       .map(model => model.init(this.connection))
-      .map(model => {
+      .forEach(model => {
         try {
           model.associate(this.connection.models);
         } catch (e) {
-          console.log('n tem');
+          //
         }
       });
   }
