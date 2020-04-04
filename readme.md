@@ -27,6 +27,15 @@ _Desfaz a ultima modificação do db:migrate_
 yarn sequelize db:migrate:undo:all
 _Desfaz todas as modificação do db:migrate_
 
+## Commands docker
+docker network create --driver bridge postgres-network
+
+docker run --name my-pgadmin4 --network=postgres-network -p 15432:80 -e "PGADMIN_DEFAULT_EMAIL=manoelgomes53@gmail.com" -e "PGADMIN_DEFAULT_PASSWORD=password" -d dpage/pgadmin4
+
+docker run --name my-postgres --network=postgres-network -e "POSTGRES_PASSWORD=docker" -p 5432:5432 -v /Users/manoelgomes/Documents/postgresSQL:/var/lib/postgresql/data -d postgres
+
+docker run --name redisbarber -p 6379:6370 -d -t redis:alpine
+
 ## Contact
 
 Manoel Gomes - [Github](https://github.com/Manogel) - **manoelgomes53@gmail.com**
