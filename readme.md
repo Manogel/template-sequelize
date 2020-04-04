@@ -7,7 +7,7 @@
 ## Required dependencies install
 
 ```sh
-yarn add @sentry/node bcryptjs bee-queue dotenv express express-async-errors express-handlebars jsonwebtoken multer nodemailer nodemailer-express-handlebars pg sequelize youch ioredis yup
+yarn add @sentry/node bcryptjs bee-queue dotenv express express-async-errors express-handlebars jsonwebtoken multer nodemailer nodemailer-express-handlebars pg sequelize youch ioredis yup express-brute express-brute-redis
 ```
 ## Required devDependencies install
 
