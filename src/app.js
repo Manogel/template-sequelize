@@ -3,6 +3,7 @@ import express from 'express';
 import path from 'path';
 import Youch from 'youch';
 import * as Sentry from '@sentry/node';
+import rateLimitConfig from './config/rateLimit';
 import sentryConfig from './config/sentry';
 import 'express-async-errors';
 import routes from './routes';
@@ -26,6 +27,9 @@ class App {
       '/files',
       express.static(path.resolve(__dirname, '..', 'temp', 'uploads'))
     );
+    if (process.env.NODE_ENV !== 'development') {
+      this.server.use(rateLimitConfig);
+    }
   }
 
   routes() {
