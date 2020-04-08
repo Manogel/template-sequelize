@@ -34,7 +34,7 @@ docker run --name my-pgadmin4 --network=postgres-network -p 15432:80 -e "PGADMIN
 
 docker run --name my-postgres --network=postgres-network -e "POSTGRES_PASSWORD=docker" -p 5432:5432 -v /Users/manoelgomes/Documents/postgresSQL:/var/lib/postgresql/data -d postgres
 
-docker run --name redisbarber -p 6379:6370 -d -t redis:alpine
+docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 
 ## Contact
 
